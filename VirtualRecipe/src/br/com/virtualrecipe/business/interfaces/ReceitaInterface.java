@@ -14,4 +14,6 @@ import br.com.virtualrecipe.dominio.PacienteReceitas;
  */
 public interface ReceitaInterface{
     public PacienteReceitas cadastrarReceita(PacienteReceitas receita);
+    public PacienteReceitas buscarRecitaPorCPF(PacienteReceitas receita);
+    
 }

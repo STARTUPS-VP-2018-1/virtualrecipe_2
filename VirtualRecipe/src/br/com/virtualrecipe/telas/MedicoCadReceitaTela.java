@@ -208,13 +208,7 @@ public class MedicoCadReceitaTela extends javax.swing.JFrame {
         rb.cadastrarReceita(pr);
         
         JOptionPane.showMessageDialog(null,"Receita cadastrada com sucesso");
-        
-        nomeMedCadReceita.setText("");
-        nomePacCadReceita.setText("");
-        crmCadReceita.setText("");
-        cpfCadReceita.setText("");
-        receitaCad.setText("");
-        
+     
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
