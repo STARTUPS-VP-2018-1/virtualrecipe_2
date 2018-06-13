@@ -78,7 +78,7 @@ public class ConsultaReceitasTela extends javax.swing.JFrame {
                 {null, null, null, null, null, null}
             },
             new String [] {
-                "ID", "CRM", "Nome do Médico", "CPF", "Nome", "Receita"
+                "ID", "CRM", "CPF", "Nome do médico", "Nome", "Receita"
             }
         ));
         jScrollPane1.setViewportView(jTable1);

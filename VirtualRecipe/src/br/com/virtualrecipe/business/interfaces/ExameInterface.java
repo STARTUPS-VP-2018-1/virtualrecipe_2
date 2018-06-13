@@ -14,5 +14,6 @@ import br.com.virtualrecipe.dominio.PacienteExames;
 public interface ExameInterface {
     
     public PacienteExames cadastrarExame(PacienteExames exames);
+    public PacienteExames buscarExamePorCPF(PacienteExames exames);
 }
 

@@ -9,11 +9,14 @@ import br.com.virtualrecipe.banco.BancoDeDados;
 import br.com.virtualrecipe.banco.conexaoBancoVirtualRecipe;
 import br.com.virtualrecipe.business.interfaces.ExameInterface;
 import br.com.virtualrecipe.dominio.PacienteExames;
+import br.com.virtualrecipe.telas.ConsultarExamesTela;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
@@ -44,5 +47,53 @@ public class ExameBusiness implements ExameInterface{
     return null;
             
     }
+
     
-}
+    public PacienteExames buscarExamePorCPF(PacienteExames exames, ConsultarExamesTela tela) {
+            Connection conn = null;
+            PreparedStatement cmd = null;
+            ResultSet rs = null;
+            
+            conn = conexaoBancoVirtualRecipe.conexao();
+            
+                      
+        try {
+            String query = "SELECT * FROM exame WHERE cpfEx = ?";
+            
+            cmd = conn.prepareStatement(query);
+            
+            cmd.setInt(1,exames.getCpfExame());
+        
+             rs = cmd.executeQuery();
+            
+            DefaultTableModel model = (DefaultTableModel) tela.jTable1.getModel();
+            
+            model.setNumRows(0);
+
+            while(rs.next()){
+                  model.addRow(new Object[]{
+                    rs.getString("idExame"),
+                    rs.getString("crmEx"),
+                    rs.getString("cpfEx"),
+                    rs.getString("nomePaEx"),
+                    rs.getString("nomeMeEx"),
+                    rs.getString("descEx")
+                    });
+            }
+            conexaoBancoVirtualRecipe.fecharfecharConexao(conn, cmd, rs);
+            
+        
+        } catch (SQLException ex) {
+            Logger.getLogger(ReceitaBusiness.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+        return null;
+    }
+
+    @Override
+    public PacienteExames buscarExamePorCPF(PacienteExames exames) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+    }
+    
+

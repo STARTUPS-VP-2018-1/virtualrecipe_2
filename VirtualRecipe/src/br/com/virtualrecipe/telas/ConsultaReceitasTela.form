@@ -169,8 +169,8 @@
                       <Table columnCount="6" rowCount="4">
                         <Column editable="true" title="ID" type="java.lang.Object"/>
                         <Column editable="true" title="CRM" type="java.lang.Object"/>
-                        <Column editable="true" title="Nome do M&#xe9;dico" type="java.lang.Object"/>
                         <Column editable="true" title="CPF" type="java.lang.Object"/>
+                        <Column editable="true" title="Nome do m&#xe9;dico" type="java.lang.Object"/>
                         <Column editable="true" title="Nome" type="java.lang.Object"/>
                         <Column editable="true" title="Receita" type="java.lang.Object"/>
                       </Table>
