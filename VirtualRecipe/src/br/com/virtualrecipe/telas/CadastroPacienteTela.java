@@ -216,11 +216,7 @@ public class CadastroPacienteTela extends javax.swing.JFrame {
         
         JOptionPane.showMessageDialog(null,"Paciente cadastrado com sucesso");
         
-        nomeP.setText("");
-        dtnascP.setText("");
-        sexoP.setText("");
-        cpfP.setText("");
-        telP.setText("");
+        
         
     }//GEN-LAST:event_jButton1ActionPerformed
 

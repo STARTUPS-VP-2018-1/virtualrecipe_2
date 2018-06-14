@@ -49,55 +49,7 @@ public class PacienteBusiness implements PacienteInterface {
     }
     return null;
     }
-    /*
-    
-    @Override
-    public Paciente buscaPaciente(Integer cpf) {
-    for (Paciente paciente: BancoDeDados.pacienteBDFake){
-    if(paciente.getCpf() == cpf){
-    return paciente;
-    }
-    }return null;
-    }
-    
-    @Override
-    public List<Paciente> buscarPacientePorNome(String nome) {
-    List<Paciente> listaDePacienteEncontrados = new ArrayList<Paciente>();
-    
-    for(int i = 0; i< BancoDeDados.pacienteBDFake.size();i++){
-    Paciente paciente = BancoDeDados.pacienteBDFake.get(i);
-    if(paciente.getNomePaciente().startsWith(nome)){
-    listaDePacienteEncontrados.add(paciente);
-    }
-    }
-    return listaDePacienteEncontrados;
-    }
-    
-    @Override
-    public List<Paciente> buscarTodosPacientes() {
-    return BancoDeDados.pacienteBDFake;
-    }
-    
-    @Override
-    public List<PacienteReceitas> buscarReceitaPaciente(Integer id) {
-    for (PacienteReceitas receita: BancoDeDados.pacienteReceitasBDFake){
-    if (if(paciente.getCpf() == cpf){
-    if(receita.getIdReceita() == id){
-    return receita;
-    }
-    }
-    
-    }return null;
-    }
-    
-    @Override
-    public List<PacienteExames> buscarExamePaciente(Integer id) {
-    for (PacienteExames exame: BancoDeDados.pacienteExamesBDFake){
-    if(exame.getIdExame() == id){
-    return exame;
-    }
-    }return null;
-    }*/
+   
 
     @Override
     public Paciente buscaPaciente(Integer id) {

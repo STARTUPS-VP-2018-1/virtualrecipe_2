@@ -62,7 +62,7 @@ public class MenuPaciente extends javax.swing.JFrame {
 
         jButton3.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         jButton3.setText("Consultar Exames");
-        jButton3.setEnabled(false);
+        jButton3.setFocusable(false);
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
@@ -176,7 +176,7 @@ public class MenuPaciente extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton3ActionPerformed
 
     /**
-     * @param args the command line arguments
+     * LoginBusiness LoginInterface = new LoginInterface
      */
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */

@@ -6,7 +6,6 @@
 package br.com.virtualrecipe.banco;
 
 import br.com.virtualrecipe.dominio.Consultorio;
-import br.com.virtualrecipe.dominio.Endereco;
 import br.com.virtualrecipe.dominio.Farmaceutico;
 import br.com.virtualrecipe.dominio.Laboratorio;
 import br.com.virtualrecipe.dominio.Medico;
@@ -30,5 +29,4 @@ public class BancoDeDados {
     public static List<PacienteExames> pacienteExamesBDFake =  new LinkedList<PacienteExames>();
     public static List<Laboratorio> laboratoriBDFake =  new LinkedList<Laboratorio>();
     public static List<Consultorio> consultorioBDFake =  new LinkedList<Consultorio>();
-    public static List<Endereco> enderecoBDFake =  new LinkedList<Endereco>();
 }
