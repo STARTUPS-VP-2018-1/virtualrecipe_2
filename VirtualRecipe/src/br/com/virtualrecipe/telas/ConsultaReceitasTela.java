@@ -7,7 +7,6 @@ package br.com.virtualrecipe.telas;
 
 import br.com.business.ReceitaBusiness;
 import br.com.virtualrecipe.dominio.PacienteReceitas;
-import javax.swing.table.DefaultTableModel;
 
 /**
  *

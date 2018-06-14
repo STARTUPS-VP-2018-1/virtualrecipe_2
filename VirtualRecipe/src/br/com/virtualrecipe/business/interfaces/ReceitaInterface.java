@@ -5,8 +5,8 @@
  */
 package br.com.virtualrecipe.business.interfaces;
 
-import br.com.virtualrecipe.dominio.Medico;
 import br.com.virtualrecipe.dominio.PacienteReceitas;
+import br.com.virtualrecipe.telas.ConsultaReceitasTela;
 
 /**
  *
@@ -14,7 +14,7 @@ import br.com.virtualrecipe.dominio.PacienteReceitas;
  */
 public interface ReceitaInterface{
     public PacienteReceitas cadastrarReceita(PacienteReceitas receita);
-    public PacienteReceitas buscarRecitaPorCPF(PacienteReceitas receita);
-    public PacienteReceitas mudarLabel(PacienteReceitas receita);
+    public PacienteReceitas buscarRecitaPorCPF(PacienteReceitas receita,ConsultaReceitasTela tela);
+    public boolean  validarCpf(String cpf);
     
 }

@@ -6,9 +6,6 @@
 package br.com.virtualrecipe.business.interfaces;
 
 import br.com.virtualrecipe.dominio.Paciente;
-import br.com.virtualrecipe.dominio.PacienteExames;
-import br.com.virtualrecipe.dominio.PacienteReceitas;
-import java.util.List;
 
 
 /**
@@ -18,8 +15,5 @@ import java.util.List;
 public interface PacienteInterface {
     public Paciente cadastrarPaciente(Paciente paciente);
     public Paciente buscaPaciente(Integer id);
-    public List<Paciente> buscarPacientePorNome(String nome);
-    public List<Paciente> buscarTodosPacientes();
-    public List<PacienteReceitas> buscarReceitaPaciente(Integer id);
-    public List<PacienteExames> buscarExamePaciente(Integer id);
+    
 }

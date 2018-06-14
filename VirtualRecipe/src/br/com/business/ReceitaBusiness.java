@@ -51,6 +51,7 @@ public class ReceitaBusiness implements ReceitaInterface {
 
     }
 
+    @Override
     public PacienteReceitas buscarRecitaPorCPF(PacienteReceitas receita, ConsultaReceitasTela tela) {
         Connection conn = null;
         PreparedStatement cmd = null;
@@ -61,10 +62,10 @@ public class ReceitaBusiness implements ReceitaInterface {
         try {
             String query = "SELECT idReceita,nomePaRe,nomeMeRe,descRe FROM receita WHERE cpfRe = ?";
             cmd = conn.prepareStatement(query);
-            cmd.setString(l,receita.getCpfReceita());
+            cmd.setInt(1, receita.getCpfReceita());
 
             rs = cmd.executeQuery();
-            
+
             DefaultTableModel model = (DefaultTableModel) tela.jTable1.getModel();
             model.setNumRows(0);
 
@@ -86,17 +87,36 @@ public class ReceitaBusiness implements ReceitaInterface {
     }
 
     @Override
-    public PacienteReceitas buscarRecitaPorCPF(PacienteReceitas receita) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    
+    public boolean validarCpf(String cpf) {
+        Connection conn = null;
+        PreparedStatement cmd = null;
+        ResultSet rs = null;
         
+        boolean check = false;
+        
+        conn = conexaoBancoVirtualRecipe.conexao();
 
-    @Override
-    public PacienteReceitas mudarLabel(PacienteReceitas receita) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        try {
+            String query = "select cpfRe from receita where cpfRe = ? group by cpfRe";
+            
+            cmd = conn.prepareStatement(query);
+            cmd.setString(1, String.valueOf(cpf));
+
+            rs = cmd.executeQuery();
+            
+            while(rs.next()){
+                check = true;
+            }
+            
+            conexaoBancoVirtualRecipe.fecharfecharConexao(conn, cmd, rs);
+            
+            
+            
+        } catch (SQLException ex) {
+            Logger.getLogger(ReceitaBusiness.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+        return check;
     }
-    }
 
-
+}
