@@ -17,8 +17,6 @@ import java.util.List;
  */
 public interface MedicoInterface {
     public Medico cadastrarMedico(Medico medico);
-    public Medico buscarMedico(Integer id);
-    public List<Medico> buscarFarmaceuticoPorNome(String nome);
-    public List<Medico> buscarTodosMedicos();
+    
     
 }

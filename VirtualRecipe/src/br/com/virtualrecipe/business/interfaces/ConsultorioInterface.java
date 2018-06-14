@@ -14,7 +14,5 @@ import java.util.List;
  */
 public interface ConsultorioInterface {
     public Consultorio cadastrarConsultorio(Consultorio consultorio);
-    public List<Consultorio> buscarConsultorioPorNome(String nome);
-    public List<Consultorio> buscarConsultorioPorTelefone(Integer telefone);
-    public List<Consultorio> buscarTodosConsultorios();
+    
 }

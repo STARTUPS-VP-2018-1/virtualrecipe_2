@@ -5,15 +5,12 @@
  */
 package br.com.business;
 
-import br.com.virtualrecipe.banco.BancoDeDados;
 import br.com.virtualrecipe.banco.conexaoBancoVirtualRecipe;
 import br.com.virtualrecipe.business.interfaces.FarmaceuticoInterface;
 import br.com.virtualrecipe.dominio.Farmaceutico;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -47,33 +44,6 @@ public class FarmaceuticoBusiness implements FarmaceuticoInterface{
     return null;
     }
 
-    @Override
-    public Farmaceutico buscarFarmaceutico(Integer crf) {
-         for (Farmaceutico farmaceutico: BancoDeDados.farmaceuticoBDFake){
-            if(farmaceutico.getCrf() == crf){
-                return farmaceutico;
-            }
-        }return null;
-    }
-
-    @Override
-    public List<Farmaceutico> buscarFarmaceuticoPorNome(String nome) {
-            List<Farmaceutico> listaDeFarmaceuticoEncontrados = new ArrayList<Farmaceutico>();        
-        
-        for(int i = 0; i< BancoDeDados.farmaceuticoBDFake.size();i++){
-            Farmaceutico farmaceutico = BancoDeDados.farmaceuticoBDFake.get(i);
-            if(farmaceutico.getNomeFarmaceutico().startsWith(nome)){
-                listaDeFarmaceuticoEncontrados.add(farmaceutico);
-            }           
-        }
-        return listaDeFarmaceuticoEncontrados;
-    }
-
-
-
-    @Override
-    public List<Farmaceutico> buscarTodosFarmaceuticos() {
-      return BancoDeDados.farmaceuticoBDFake;
-    }    
+    
     
 }

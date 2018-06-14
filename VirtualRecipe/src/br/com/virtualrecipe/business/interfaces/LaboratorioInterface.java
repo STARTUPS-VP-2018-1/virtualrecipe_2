@@ -14,7 +14,5 @@ import java.util.List;
  */
 public interface LaboratorioInterface {
     public Laboratorio cadastrarLaboratorio(Laboratorio laboratorio);
-    public List<Laboratorio> buscarLaboratorioPorNome(String nome);
-    public List<Laboratorio> buscarLaboratorioPorTelefone(Integer telefone);
-    public List<Laboratorio> buscarTodosLaboratorios();
+    
 }

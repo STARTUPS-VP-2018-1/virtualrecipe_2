@@ -15,7 +15,5 @@ import java.util.List;
 public interface FarmaceuticoInterface {
     
     public Farmaceutico cadastrarFarmaceutico(Farmaceutico farmaceutico);
-    public Farmaceutico buscarFarmaceutico(Integer id);
-    public List<Farmaceutico> buscarFarmaceuticoPorNome(String nome);
-    public List<Farmaceutico> buscarTodosFarmaceuticos();
+    
 }
